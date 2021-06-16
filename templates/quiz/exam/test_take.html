@@ -1,0 +1,43 @@
+{% extends 'home.html' %}
+{% block content %}
+
+<br><br>
+<div class="container my-4">
+    <div class="jumbotron">
+
+
+
+
+
+            <div class="card border-info mx-4 my-4">
+                <div class="card-body text-info">
+
+                    <h4 class="card-title">О тесте :</h4>
+                    <p class="card-text">
+                        </p><ul style="list-style:decimal;">
+                            <li>Название : {{topic.topic_name}}</li>
+                            <li>Вопросы : {{total_questions}}</li>
+                        </ul>
+                    <p></p>
+
+
+
+                    <h4 class="card-title">Правила :</h4>
+                    <p class="card-text">
+                        </p><ul style="list-style:decimal;">
+                            <li>Может быть много правильных ответов.</li>
+                            <li>За один правильный ответ 1 балл.</li>
+                            <li>Вам сообщат ваши оценки сразу же, как только вы отправите ответ..</li>
+                        </ul>
+                    <p></p>
+                    <a href="{% url 'test_start' topic.id  %}" class="btn btn-info">Начинаем</a>
+                </div>
+                <div class="card-footer">Удачи</div>
+            </div>
+        </div>
+
+    </div>
+
+
+<br><br><br><br><br><br>
+{% endblock content %}

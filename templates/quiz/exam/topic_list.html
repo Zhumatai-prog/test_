@@ -1,0 +1,28 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+    <br>
+    <br>
+
+    <table class="table">
+        <tr>
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Название Теста</th>
+                    <th scope="col">Вопросы</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for topic in topics %}
+                    <tr>
+                        <td>{{ topic.id }}</td>
+                        <td><a href="{% url 'test_take' topic.id %}">{{ topic.topic_name }}</a></td>
+                        <td>{{ topic.question_number }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </tr>
+    </table>
+{% endblock content %}

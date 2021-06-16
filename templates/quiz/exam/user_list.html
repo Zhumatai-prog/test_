@@ -1,0 +1,30 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+    <br>
+    <br>
+
+    <table class="table">
+        <tr>
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Пользователь</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for us in users %}
+                    <tr>
+                        {% if us.is_superuser %}
+                        {% else %}
+                            <td>{{ us.id }}</td>
+                            <td><a href="#">{{ us.username }}</a></td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </tr>
+    </table>
+{% endblock content %}

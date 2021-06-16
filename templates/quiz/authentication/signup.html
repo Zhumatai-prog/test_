@@ -1,0 +1,35 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<br><br><br><br>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form class="box" method="post">
+                    {% csrf_token %}
+
+                    <h3 style="text-align: center;color: red;">РЕГИСТРАЦИЯ НОВОГО ПОЛЬЗОВАТЕЛЯ!</h3>
+
+                    <label for="username">Логин</label>
+                    {% render_field form.username class="form-control" %}
+
+                    <br>
+
+                    <label for="inputPassword4">Пароль</label>
+                    {% render_field form.password class="form-control" %}
+
+                    <br>
+                    <input type="submit" name="" class="btn btn-primary value="Регистрация!">
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+{% endblock content %}

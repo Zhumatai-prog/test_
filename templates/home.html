@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+    <body>
+        
+        {% include "navbar.html" %}
+        {% block content %}
+
+        <br>
+        <section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+            <div class="container text-center">
+
+
+
+
+                <a href="{% url 'login' %}" class="btn btn-lg btn-info" style="padding-right: 20px; padding-left: 10px;">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                     Войти
+                </a>
+                <br>
+                <br>
+                <a href="{% url 'signup' %}" class="btn btn-lg btn-info" style="padding-right: 20px; padding-left: 10px;">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    Регистрация
+                </a>
+
+                <br><br><br>
+            </div>
+        </section>
+
+        {% endblock content %}
+
+    </body>
+</html>
